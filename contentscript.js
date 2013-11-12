@@ -6,3 +6,8 @@ chrome.extension.onRequest.addListener(
 
   }
 );
+
+
+$(function(){
+    $("h1, p, #box").box2d({'y-velocity':5});
+});
