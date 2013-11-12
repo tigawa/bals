@@ -1,0 +1,28 @@
+{
+    "name": "bals",
+    "version": "0.1",
+    "manifest_version": 2,
+    
+    "description": "表示しているサイトを崩壊したように見せかけるオバカアプリです。",
+ 
+    "permissions": [
+        "tabs", "<all_urls>", "contextMenus"
+    ],
+    
+    "icons": {
+        "16" : "images/castle_16.png",
+        "48" : "images/castle_48.png",
+        "128": "images/castle_128.png"
+    },
+    
+    "content_scripts": [
+    	{
+		"matches": ["<all_urls>"],
+      		"js": [	"js/jquery-1.9.1.js",
+       		    	"contentscript.js"]
+       	}
+    ],
+    
+    /* アプリ内で使用する画像ファイルを定義 */
+    "web_accessible_resources": []
+}
